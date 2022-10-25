@@ -61,6 +61,11 @@ h1, h2, h3, h4, h5, h6
 $main-color: #1eacc7
 $second-color: #ff5656
 
+=btn_hover
+	&:hover
+		background-image: none
+		background-color: $main-color
+
 *
 	font-family: 'Roboto'
 
@@ -98,93 +103,86 @@ nav
 	height: 87px
 	background-color: rgba(0, 0, 0, 0.6)
 	margin-top: 50px
-
-.subheader_logo
-	display: block
-	min-width: 100%
-	margin-top: 16px
-
-.subheader_official
-	font-weight: 100
-	font-size: 13px
-	color: #FFFFFF
-	opacity: 0.5
-	margin-top: 6px
-
-.subheader_call
-	margin-top: 20px
-	font-weight: 300
-	font-size: 14px
-	text-align: right
-	color: #FFFFFF
-
-.subheader_phone
-	display: block
-	margin-top: 8px
-	font-weight: 400
-	font-size: 22px
-	text-align: right
-	text-transform: uppercase
-	color: #FFFFFF
-	line-height: 12px
-
-.subheader_btn
-	width: 172px
-	height: 46px
-	margin-top: 20px
-	font-weight: 400
-	font-size: 14px
-	text-align: center
-	text-transform: uppercase
-	color: #FFFFFF
-	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
-	background: linear-gradient(0deg, #1EACC7 0%, $main-color 100%)
-	box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
-	border-radius: 4px
+	&_logo
+		display: block
+		min-width: 100%
+		margin-top: 16px
+	&_official
+		font-weight: 100
+		font-size: 13px
+		color: #FFFFFF
+		opacity: 0.5
+		margin-top: 6px
+	&_call
+		margin-top: 20px
+		font-weight: 300
+		font-size: 14px
+		text-align: right
+		color: #FFFFFF
+	&_phone
+		display: block
+		margin-top: 8px
+		font-weight: 400
+		font-size: 22px
+		text-align: right
+		text-transform: uppercase
+		color: #FFFFFF
+		line-height: 12px
+	&_btn
+		width: 172px
+		height: 46px
+		margin-top: 20px
+		font-weight: 400
+		font-size: 14px
+		text-align: center
+		text-transform: uppercase
+		color: #FFFFFF
+		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+		background-image: linear-gradient(0deg, $main-color 0%, #4ce2ff 100%)
+		box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
+		border-radius: 4px
+		+btn_hover
 
 .promo
 	min-height: 800px
 	background: url(../img/bg1.jpg) center (center / cover) no-repeat
 	text-align: center
 	padding: 150px 0 135px 0
-
-.promo_header
-	font-weight: 700
-	font-size: 60px
-	text-transform: uppercase
-	color: #FFFFFF
-	margin-top: 60px
-	line-height: 60px
-	margin-bottom: 0
-
-.promo_subheader
-	font-weight: 700
-	font-size: 36px
-	text-transform: uppercase
-	color: #FFFFFF
-	line-height: 36px
-	margin-bottom: 0
-	margin-top: 22px
-
-.promo_descr
-	font-weight: 400
-	font-size: 18px
-	line-height: 24px
-	color: #FFFFFF
-	margin-top: 23px
-
-.promo_btn
-	width: 259px
-	height: 63px
-	background: linear-gradient(0deg, $main-color 0%, $main-color 100%)
-	box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12)
-	border-radius: 4px
-	font-weight: 400
-	font-size: 18px
-	text-transform: uppercase
-	color: #FFFFFF
-	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
-	margin-top: 118px
+	&_header
+		font-weight: 700
+		font-size: 60px
+		text-transform: uppercase
+		color: #FFFFFF
+		margin-top: 60px
+		line-height: 60px
+		margin-bottom: 0
+	&_subheader
+		font-weight: 700
+		font-size: 36px
+		text-transform: uppercase
+		color: #FFFFFF
+		line-height: 36px
+		margin-bottom: 0
+		margin-top: 22px
+	&_descr
+		font-weight: 400
+		font-size: 18px
+		line-height: 24px
+		color: #FFFFFF
+		margin-top: 23px
+	&_btn
+		width: 259px
+		height: 63px
+		background-image: linear-gradient(0deg, $main-color 0%, #4ce2ff 100%)
+		box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12)
+		border-radius: 4px
+		font-weight: 400
+		font-size: 18px
+		text-transform: uppercase
+		color: #FFFFFF
+		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+		margin-top: 118px
+		+btn_hover
 
 .reasons
 	padding: 71px 0 65px 0
@@ -320,6 +318,27 @@ nav
 			margin: 0 auto
 			border-radius: 100%
 			cursor: pointer
+			&::before
+				content:""
+				display: block
+				width: 14px
+				height: 2px
+				background-color: $main-color
+				transition: 0.3 all
+			&::after
+				content:""
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)		
+				display: block
+				height: 14px
+				width: 2px
+				background-color: $main-color
+				transition: 0.3 all
+			&:hover
+				&::before, &::after
+					background-color: $second-color
+
 .choice
 	position: relative
 	min-height: 895px
@@ -344,4 +363,47 @@ nav
 		width: 100%
 		background-color: #070716
 		z-index: 1
+
+.require 
+	padding: 68px 0 84px 0
+	&_block
+		margin: 33px 0
+		&_nmb
+			margin-bottom: 0
+	&_title
+		font-weight: 400
+		font-size: 22px
+		color: #1CA8C3
+	&_list
+		padding-left: 50px
+		margin-top: 22px
+		li
+			position: relative
+			font-weight: 300
+			font-size: 17px
+			color: #222222
+			line-height: 24px
+			margin-bottom: 12px
+			&::before
+				content: ""
+				display: block
+				position: absolute
+				left: -32px
+				width: 21px
+				height: 20px
+				background: url("../icons/Mark-blue.png") center (center / cover) no-repeat
+	&_descr
+		margin-top: 25px
+		font-size: 17px
+		font-weight: 300
+		line-height: 24px
+		color: #1ca8c3
+	.warning
+		.require_title
+			color: $second-color
+		.require_list
+			li
+				&::before
+					background: url("../icons/Mark-red.png") center (center / cover) no-repeat
+
 
