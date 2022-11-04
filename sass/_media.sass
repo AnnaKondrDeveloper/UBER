@@ -20,13 +20,6 @@
 	.choice 
 		padding: 55px 0
 		min-height: 840px
-	.require
-		&_block
-			font-size: 18px
-		&_title
-			font-size: 20px
-		&_list li 
-			font-size: 15px
 	.footer
 		&_wrapper > div 
 			width: 50%
@@ -47,11 +40,13 @@
 					width: 100%
 		
 @media (max-width: 991px)
+	.title 
+		font-size: 28px
 	.menu
 		&_item
-			padding-right: 8px
+			padding-right: 18px
 		&_link
-			font-size: 10px
+			font-size: 12px
 	.subheader
 		&_logo
 			img
@@ -141,8 +136,10 @@
 			padding-right: 0
 			border: none
 			margin: 10px 0
-		&_link 
+		&_link
 			font-size: 20px
+			a
+				display: block
 	.hamburger
 		display: block
 		position: absolute
