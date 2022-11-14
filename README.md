@@ -7,3 +7,7 @@ The site is made according to the layout with Design systems Figma
 - Semantic HTML5 markup <br>
 - CSS custom properties <br>
 - SASS extension language
+<br>
+<br>
+Design file translated from Russian:<br>
+https://www.figma.com/file/ivgb9OfADjPvRowi32CSgY/UBER_course?node-id=0%3A1
