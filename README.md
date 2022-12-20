@@ -11,3 +11,12 @@ The site is made according to the layout with Design systems Figma
 <br>
 Design file translated from Russian:<br>
 https://www.figma.com/file/ivgb9OfADjPvRowi32CSgY/UBER_course?node-id=0%3A1
+
+<h2>Screenshots</h2>
+<br>
+
+![image](https://github.com/AnnaKondrDeveloper/UBER/raw/main/img/homepage.png)
+
+<h3>Mobile responsive disign</h3>
+
+![image](https://github.com/AnnaKondrDeveloper/UBER/raw/main/img/mobile.png)
